@@ -14,11 +14,11 @@ import StudentsEnrolled from "./pages/educators/StudentsEnrolled";
 import Navbar from "./components/students/Navbar";
 
 const App = () => {
-  const isEducatorRoute = useMatch('/educator/*')
+  const isEducatorRoute = useMatch("/educator/*");
   return (
     <div className="text-default min-h-screen bg-white">
       {!isEducatorRoute && <Navbar />}
-      
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses-list" element={<CoursesList />} />

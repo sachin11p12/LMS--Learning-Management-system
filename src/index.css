@@ -27,6 +27,16 @@
   line-height: 21px;
 }
 
+@utility grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+ 
+
+/* gridTemplateColumns : {
+  'auto': 'repeat(auto-fit, minmax(250px, 1fr))'
+} */
+
+
 * {
   font-family: Outfit;
 }
