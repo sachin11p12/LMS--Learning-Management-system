@@ -2,6 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import { useParams } from "react-router-dom";
 import { assets } from "../../assets/assets";
+import humanizeDuration from "humanize-duration";
+import YouTube from "react-youtube";
+import Footer from "../../components/students/Footer";
+import Loading from "../../components/students/Loading";
 
 const Player = () => {
   const { enrolledCourses, calculateChapterTime } = useContext(AppContext);
@@ -11,7 +15,7 @@ const Player = () => {
   const [playerData, setPlayerData] = useState(null);
 
   const getCourseData = () => {
-    enrolledCourses.map((course) => {
+    enrolledCourses.forEach((course) => {
       if (course._id === courseId) {
         setCourseData(course);
       }
@@ -22,12 +26,11 @@ const Player = () => {
     setOpenSections((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
-
   useEffect(() => {
     getCourseData();
-  }, []);
+  }, [enrolledCourses, courseId]);
 
-  return (
+  return courseData ? (
     <>
       <div className="p-4 sm:p-10 flex flex-col-reverse md:grid md:grid-cols-2 gap-10 md:px-36">
         {/* left */}
@@ -67,29 +70,27 @@ const Player = () => {
                       {chapter.chapterContent.map((lecture, i) => (
                         <li key={i} className="flex items-start gap-2 py-1">
                           <img
-                            src={false ? assets.blue_tick_icon : assets.play_icon}
+                            src={
+                              false ? assets.blue_tick_icon : assets.play_icon
+                            }
                             alt="play icon"
                             className="w-4 h-4 mt-1"
                           />
                           <div className="flex items-center justify-between w-full text-gray-800 text-xs md:text-default">
                             <p className="">{lecture.lectureTitle}</p>
                             <div className="flex gap-2">
-                              {lecture.isPreviewFree && (
+                              {lecture.lectureUrl && (
                                 <p
                                   onClick={() =>
                                     setPlayerData({
-                                      videoId: lecture.lectureUrl
-                                        .split("/")
-                                        .pop()
-                                        .split("v=")
-                                        .pop()
-                                        .split("&")
-                                        .shift(),
+                                      ...lecture,
+                                      chapter: index + 1,
+                                      lecture: i + 1,
                                     })
                                   }
                                   className="text-blue-500 cursor-pointer"
                                 >
-                                  Preview
+                                  Watch
                                 </p>
                               )}
                               <p>
@@ -109,9 +110,40 @@ const Player = () => {
           </div>
         </div>
         {/* right */}
-        <div></div>
+        <div className="md:mt-10">
+          {playerData ? (
+            <div>
+              <YouTube
+                videoId={playerData.lectureUrl
+                  .split("/")
+                  .pop()
+                  .split("v=")
+                  .pop()
+                  .split("&")
+                  .shift()}
+                iframeClassName="w-full aspect-video"
+              />
+              <div className="flex justify-between items-center mt-1">
+                <p>
+                  {playerData.chapter}.{playerData.lecture}{" "}
+                  {playerData.lectureTitle}
+                </p>
+                <button className="text-blue-600 cursor-pointer">
+                  {false ? "completed" : "Mark Complete"}{" "}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <img src={courseData ? courseData.courseThumbnail : ""} alt="" />
+          )}
+        </div>
       </div>
+      <Footer />
     </>
+  ) : (
+    <div className="min-h-screen">
+      <Loading />
+    </div>
   );
 };
 
