@@ -7,7 +7,13 @@ import { assets } from "../../assets/assets";
 const CourseDetails = () => {
   const { id } = useParams();
   const [courseData, setCourseData] = useState(null);
-  const { allCourses, calculaterating } = useContext(AppContext);
+  const {
+    allCourses,
+    calculaterating,
+    calculateNoOfLectures,
+    calculteCourseDuration,
+    calculateChapterTime,
+  } = useContext(AppContext);
   const fetchCourseData = async () => {
     const findCourse = allCourses.find((course) => course._id === id);
     setCourseData(findCourse);
@@ -56,7 +62,31 @@ const CourseDetails = () => {
               {courseData.enrolledStudents.length > 1 ? "students" : "student"}
             </p>
           </div>
-          <p className="text-sm">Course by <span className="text-blue-600 underline cursor-pointer">Sachin Tiwari </span></p>
+          <p className="text-sm">
+            Course by{" "}
+            <span className="text-blue-600 underline cursor-pointer">
+              Sachin Tiwari{" "}
+            </span>
+          </p>
+          <div className="pt-8 text-gray-800">
+            <h2 className="text-xl font-semibold">Course Structure</h2>
+            <div className="pt-5">
+              {courseData.courseContent.map((chapter, index) => (
+                <div key={index}>
+                  <div>
+                    <div>
+                      <img src={assets.down_arrow_icon} alt="arrow icon" />
+                      <p>{chapter.chapterTitle}</p>
+                    </div>
+                    <p>
+                      {chapter.chapterContent.length} lectures -{" "}
+                      {calculateChapterTime(chapter)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         {/* right column */}
         <div></div>
