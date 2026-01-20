@@ -15,6 +15,7 @@ const CourseDetails = () => {
     calculateNoOfLectures,
     calculateCourseDuration,
     calculateChapterTime,
+    currency,
   } = useContext(AppContext);
   const fetchCourseData = async () => {
     const findCourse = allCourses.find((course) => course._id === id);
@@ -35,7 +36,7 @@ const CourseDetails = () => {
         <div className="absolute top-0 left-0 w-full h-section-height bg-linear-to-b from-cyan-100/70"></div>
         {/* left column */}
         <div className="max-w-xl z-10 text-gray-500">
-          <h1 className="md:text-course-details-heading-large text-course-details-heading-small font-semibold text-gray-800">
+          <h1 className="course-title md:text-course-details-heading-large text-course-details-heading-small font-semibold text-gray-800">
             {courseData.courseTitle}
           </h1>
           <p
@@ -106,7 +107,7 @@ const CourseDetails = () => {
                   <div
                     className={`overflow-hidden transition-all duration-300 ${openSections[index] ? "max-h-96" : "max-h-0"}`}
                   >
-                    <ul className="list-disc md:pl-10 pl-4 pr-4 py-2 text-gray-500 border border-gray-300">
+                    <ul className="list-disc md:pl-10 pl-4 pr-4 py-2 text-gray-500 border-t border-gray-300">
                       {chapter.chapterContent.map((lecture, i) => (
                         <li key={i} className="flex items-start gap-2 py-1">
                           <img
@@ -139,9 +140,11 @@ const CourseDetails = () => {
             </div>
           </div>
           <div className="py-20 text-sm md:text-default">
-            <h3 className="text-xl font-semibold text-gray-800">Course Description</h3>
+            <h3 className="text-xl font-semibold text-gray-800">
+              Course Description
+            </h3>
             <p
-              className="pt-3 rich-text"
+              className="pt-3 rich-text font-outfit"
               dangerouslySetInnerHTML={{
                 __html: courseData.courseDescription,
               }}
@@ -149,7 +152,33 @@ const CourseDetails = () => {
           </div>
         </div>
         {/* right column */}
-        <div></div>
+        <div className="max-w-course-card custom-card z-10 rounded-t md:rounded-none overflow-hidden bg-white min-w-[300px] sm:min-w-[420px]">
+          <img src={courseData.courseThumbnail} alt="" />
+          <div className="p-5">
+            <div className="flex items-center gap-2">
+              <img
+                src={assets.time_left_clock_icon}
+                alt="time left clock icon"
+                className="w-3.5"
+              />
+              <p className="text-red-500 text-sm">
+                <span className="font-medium">5</span> days left at this
+                price!{" "}
+              </p>
+            </div>
+            <div className="flex gap-3 items-center pt-2">
+              <p className="text-gray-800 md:text-4xl text-2xl font-semibold">
+                {currency}{" "}
+                {(
+                  courseData.coursePrice -
+                  (courseData.discount * courseData.coursePrice) / 100
+                ).toFixed(2)}
+              </p>
+              <p className="md:text-lg text-gray-500 line-through">{currency}{courseData.coursePrice}</p>
+              <p className="md:text-lg text-gray-500">{courseData.discount}% off</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   ) : (
