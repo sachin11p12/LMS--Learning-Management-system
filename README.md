@@ -61,6 +61,6 @@ src/
 
 ## 🎨 Design Philosophy
 
-Edemy follows a **"Wow First"** design philosophy. We prioritize vibrant colors, curated typography (using Inter/Outfit fonts), and interactive elements that make the platform feel alive.
+Edemy is a project I built with a “Wow First” mindset—combining vibrant colors, modern typography (Inter & Outfit), and interactive UI to create an engaging experience.
 
-Developed with ❤️ by the Sachin Tiwari.
+Built with ❤️ by Sachin Tiwari.
