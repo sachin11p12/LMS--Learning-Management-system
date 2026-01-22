@@ -11,7 +11,7 @@ const Footer = () => {
           Copyright © 2026 Sachin Tiwari. All rights reserved.
         </p>
       </div>
-      <div className="flex items-center gap-3 max-md:mt-4">
+      {/* <div className="flex items-center gap-3 max-md:mt-4">
         <a href="">
           <img src={assets.facebook_icon} alt="facebook_icon" />
         </a>
@@ -21,7 +21,7 @@ const Footer = () => {
         <a href="">
           <img src={assets.instagram_icon} alt="instagram_icon" />
         </a>
-      </div>
+      </div> */}
     </footer>
   );
 };
