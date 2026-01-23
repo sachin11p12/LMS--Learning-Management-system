@@ -184,7 +184,7 @@ export const dummyStudentEnrolled = [
   {
     student: {
       _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-      name: "GreatStack",
+      name: "Akash",
       imageUrl:
         "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
     },
@@ -194,7 +194,7 @@ export const dummyStudentEnrolled = [
   {
     student: {
       _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-      name: "GreatStack",
+      name: "Nitin",
       imageUrl:
         "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
     },
@@ -204,7 +204,7 @@ export const dummyStudentEnrolled = [
   {
     student: {
       _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-      name: "GreatStack",
+      name: "Shubham",
       imageUrl:
         "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
     },
@@ -214,7 +214,7 @@ export const dummyStudentEnrolled = [
   {
     student: {
       _id: "user_2qQlvXyr02B4Bq6hT0Gvaa5fT9V",
-      name: "GreatStack",
+      name: "Krish",
       imageUrl:
         "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ycVFsdmFMSkw3ckIxNHZMU2o4ZURWNEtmR2IifQ",
     },
