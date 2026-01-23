@@ -35,7 +35,7 @@ const Dashboard = () => {
               <p className="text-2xl font-medium text-gray-600">
                 {dashboardData.totalCourses}
               </p>
-              <p>Total Enrollment</p>
+              <p>Total Courses</p>
             </div>
           </div>
 
@@ -43,9 +43,9 @@ const Dashboard = () => {
             <img src={assets.earning_icon} alt="earning_icon" />
             <div>
               <p className="text-2xl font-medium text-gray-600">
-                {dashboardData.totalEarnings}
+                {currency}{dashboardData.totalEarnings}
               </p>
-              <p>Total Enrollment</p>
+              <p>Total Earnings</p>
             </div>
           </div>
         </div>
