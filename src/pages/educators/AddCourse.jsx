@@ -98,6 +98,11 @@ const AddCourse = () => {
     });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+  }
+
   useEffect(() => {
     //Initiate Quill only once
     if (!quillRef.current && editorRef.current) {
@@ -109,7 +114,7 @@ const AddCourse = () => {
 
   return (
     <div className="h-screen overflow-scroll flex flex-col items-start justify-between md:p-8 md:pb-0 p-4 pt-8 pb-0">
-      <form className="flex flex-col gap-4 max-w-md w-full text-gray-500">
+      <form className="flex flex-col gap-4 max-w-md w-full text-gray-500" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-1">
           <p>Course Title </p>
           <input
@@ -338,6 +343,7 @@ const AddCourse = () => {
         <button
           type="submit"
           className="bg-black text-white px-8 my-4 py-2.5 rounded w-max"
+          
         >
           ADD
         </button>
