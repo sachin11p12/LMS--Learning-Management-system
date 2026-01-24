@@ -59,7 +59,9 @@ const AddCourse = () => {
       setChapters(
         chapters.map((chapter) => {
           if (chapter.chapterId === chapterId) {
-            chapter.chapterContent.splice(lectureIndex, 1);
+            const updatedContent = chapter.chapterContent.slice();
+            updatedContent.splice(lectureIndex, 1);
+            return { ...chapter, chapterContent: updatedContent };
           }
           return chapter;
         }),
@@ -79,7 +81,10 @@ const AddCourse = () => {
                 : 1,
             lectureId: uniquid(),
           };
-          chapter.chapterContent.push(newLecture);
+          return {
+            ...chapter,
+            chapterContent: [...chapter.chapterContent, newLecture],
+          };
         }
         return chapter;
       }),
@@ -167,72 +172,79 @@ const AddCourse = () => {
         </div>
         {/* Adding Chapters and Lectures */}
         <div>
-          {chapters.map((chapter, chapterIndex) => (
-            <div key={chapterIndex} className="bg-white border rounded-lg mb-4">
-              <div className="flex justify-between items-center p-4 border-b">
-                <div className="flex items-center">
-                  <img
-                    src={assets.dropdown_icon}
-                    width={14}
-                    alt=""
-                    className={`mr-2 cursor-pointer transition-all ${chapter.collapsed && "-rotate-90"}`}
-                  />
-                  <span className="font-semibold">
-                    {chapterIndex + 1} {chapter.chapterTitle}
-                  </span>
-                </div>
-                <span className="text-gray-500">
-                  {chapter.chapterContent.length} Lectures
-                </span>
-                <img
-                  src={assets.cross_icon}
-                  alt=""
-                  className="cursor-pointer"
-                />
-              </div>
-              {!chapter.collapsed && (
-                <div className="p-4">
-                  {chapter.chapterContent.map((lecture, lectureIndex) => (
-                    <div
-                      key={lectureIndex}
-                      className="flex justify-between items-center mb-2"
-                    >
-                      <span>
-                        {lectureIndex + 1} {lecture.lectureTitle} -{" "}
-                        {lecture.lectureDuration} mins -{" "}
-                        <a
-                          href={lecture.lectureUrl}
-                          target="_blank"
-                          className="text-blue-500"
-                        >
-                          Link
-                        </a>{" "}
-                        - {lecture.isPreviewFree ? "free Preview" : "paid"}{" "}
-                      </span>
-                      <img
-                        onClick={() =>
-                          handleLecture(
-                            "remove",
-                            chapter.chapterId,
-                            lectureIndex,
-                          )
-                        }
-                        src={assets.cross_icon}
-                        alt=""
-                        className="cursor-pointer"
-                      />
-                    </div>
-                  ))}
-                  <div
-                    className="inline-flex bg-gray-100 p-2 rounded cursor-pointer mt-2"
-                    onClick={() => handleLecture("add", chapter.chapterId)}
-                  >
-                    + Add Lecture
+          {chapters.length > 0 &&
+            chapters.map((chapter, chapterIndex) => (
+              <div
+                key={chapterIndex}
+                className="bg-white border rounded-lg mb-4"
+              >
+                <div className="flex justify-between items-center p-4 border-b">
+                  <div className="flex items-center">
+                    <img
+                      onClick={() => handleChapter("toggle", chapter.chapterId)}
+                      src={assets.dropdown_icon}
+                      width={14}
+                      alt=""
+                      className={`mr-2 cursor-pointer transition-all ${chapter.collapsed && "-rotate-90"}`}
+                    />
+                    <span className="font-semibold">
+                      {chapterIndex + 1} {chapter.chapterTitle}
+                    </span>
                   </div>
+                  <span className="text-gray-500">
+                    {chapter.chapterContent.length} Lectures
+                  </span>
+                  <img
+                    onClick={() => handleChapter("remove", chapter.chapterId)}
+                    src={assets.cross_icon}
+                    alt=""
+                    className="cursor-pointer"
+                  />
                 </div>
-              )}
-            </div>
-          ))}
+                {!chapter.collapsed && (
+                  <div className="p-4">
+                    {chapter.chapterContent.map((lecture, lectureIndex) => (
+                      <div
+                        key={lectureIndex}
+                        className="flex justify-between items-center mb-2"
+                      >
+                        <span>
+                          {lectureIndex + 1} {lecture.lectureTitle} -{" "}
+                          {lecture.lectureDuration} mins -{" "}
+                          <a
+                            href={lecture.lectureUrl}
+                            target="_blank"
+                            className="text-blue-500"
+                          >
+                            Link
+                          </a>{" "}
+                          -{" "}
+                          {lecture.isPreviewFree ? "free Preview" : "paid"}{" "}
+                        </span>
+                        <img
+                          onClick={() =>
+                            handleLecture(
+                              "remove",
+                              chapter.chapterId,
+                              lectureIndex,
+                            )
+                          }
+                          src={assets.cross_icon}
+                          alt=""
+                          className="cursor-pointer"
+                        />
+                      </div>
+                    ))}
+                    <div
+                      className="inline-flex bg-gray-100 p-2 rounded cursor-pointer mt-2"
+                      onClick={() => handleLecture("add", chapter.chapterId)}
+                    >
+                      + Add Lecture
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           <div
             className="flex justify-center items-center bg-blue-100 p-2 rounded-lg cursor-pointer"
             onClick={() => handleChapter("add")}
