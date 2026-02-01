@@ -61,6 +61,10 @@ src/
 
 ## 🎨 Design Philosophy
 
+## Backend
+
+Springboot, postgreSQL
+
 Edemy is a project I built with a “Wow First” mindset—combining vibrant colors, modern typography (Inter & Outfit), and interactive UI to create an engaging experience.
 
 Built with ❤️ by Sachin Tiwari.
