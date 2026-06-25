@@ -1,29 +1,18 @@
-````md
 <div align="center">
 
 # ⚡ EDEMY
 
-### 🚀 Next-Generation Learning Management System
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&width=750&lines=Premium+Learning+Platform;Modern+UI;React+%2B+Vite+%2B+TailwindCSS" alt="Typing SVG"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&width=750&lines=Premium+Learning+Platform;Modern+UI+%7C+Fast+Performance;React+%2B+Vite+%2B+TailwindCSS;Backend+Developer+Required" alt="Typing SVG"/>
+<br>
 
-<br><br>
-
-<img src="https://img.shields.io/badge/Frontend-Completed-00C853?style=for-the-badge&logo=vercel&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
 <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
-<img src="https://img.shields.io/badge/TailwindCSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
-<img src="https://img.shields.io/badge/Responsive-100%25-success?style=for-the-badge&logo=googlechrome&logoColor=white"/>
-<img src="https://img.shields.io/badge/UI-Futuristic-blueviolet?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge"/>
-
----
-
-> ### ✨ A Premium Learning Management System built with **React + Vite + Tailwind CSS** featuring a futuristic UI, smooth animations, and a modern learning experience.
 
 </div>
 
 ---
+
 
 # 🌌 About
 
