@@ -1,70 +1,200 @@
-# ⚡ Edemy - Next-Generation LMS Platform
+````md
+<div align="center">
 
-Edemy is a premium Learning Management System (LMS) designed for a seamless learning experience. Built with a focus on **visual excellence** and **high performance**, it provides students with an intuitive interface to learn and educators with powerful tools to teach.
+# ⚡ EDEMY
 
----
+### 🚀 Next-Generation Learning Management System
 
-## 🚀 Tech Stack
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=28&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Premium+Learning+Platform;Modern+UI+%7C+Fast+Performance;React+%2B+Vite+%2B+TailwindCSS;Backend+Required+👨‍💻" />
 
-Edemy is built using a modern, high-performance stack:
+<br>
 
-- **Frontend**: ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-- **Styling**: ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-- **State Management**: React Context API
-- **Routing**: React Router DOM (v6)
-- **Animations**: CSS3, Tailwind transitions
-- **Video Handling**: `react-youtube` for high-quality video streaming
-
----
-
-## ✨ Key Features
-
-### 🎓 For Students
-
-- **Dynamic Course Explorer**: Filter and search through a rich catalog of courses.
-- **Seamless Video Player**: Custom-built YouTube player with lecture navigation and "Mark as Complete" functionality.
-- **Smart Progress Tracking**: Visual progress bars and lecture counts in the "My Enrollments" section.
-- **Premium UI**: Dark mode support, glassmorphism elements, and smooth micro-animations.
-
-### 👩‍🏫 For Educators (Dashboard)
-
-- **Course Management**: Add, edit, and manage courses with ease.
-- **Student Analytics**: Track enrollment numbers and student progress across your courses.
-- **Rich Content Support**: Organize courses into chapters and lectures with detailed durations.
+<img src="https://img.shields.io/badge/Status-Frontend_Completed-00FF99?style=for-the-badge&logo=vercel"/>
+<img src="https://img.shields.io/badge/Version-1.0-blueviolet?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Made%20With-❤-red?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/UI-Futuristic-cyan?style=for-the-badge"/>
 
 ---
 
-## 📂 Project Structure
+# ⚠️ BACKEND REQUIRED ⚠️
+
+# 💰 Backend Development Budget: **₹5,000**
+
+### Looking for a **Spring Boot + PostgreSQL** Developer
+
+> 📩 Interested? Feel free to contact me.
+
+---
+
+</div>
+
+# 🌌 About
+
+**Edemy** is a futuristic Learning Management System designed with a premium UI/UX experience.
+
+It combines smooth animations, responsive layouts, modern typography, glassmorphism, and vibrant gradients to create a next-level learning experience.
+
+---
+
+# ✨ Features
+
+## 🎓 Student Panel
+
+- 🔍 Smart Course Search
+- 📚 Dynamic Course Explorer
+- ▶️ YouTube Video Player
+- 📈 Progress Tracking
+- 🌙 Dark Mode
+- ⚡ Smooth Animations
+- 💎 Glassmorphism UI
+- 📱 Fully Responsive
+
+---
+
+## 👨‍🏫 Educator Dashboard
+
+- ➕ Add Courses
+- ✏️ Edit Courses
+- 🗑 Delete Courses
+- 📊 Student Analytics
+- 📖 Chapters & Lectures
+- 📅 Course Management
+
+---
+
+# 🚀 Tech Stack
+
+<div align="center">
+
+| Frontend | Styling | Routing | State |
+|----------|----------|----------|----------|
+| React ⚛️ | Tailwind CSS v4 | React Router | Context API |
+
+| Build Tool | Video | Animation |
+|------------|----------|-------------|
+| Vite ⚡ | react-youtube | CSS + Tailwind |
+
+</div>
+
+---
+
+# 🗂 Project Structure
 
 ```bash
-src/
-├── assets/       # Static assets (Images, Icons, Dummy Data)
-├── components/   # Reusable UI components (Navbar, Footer, CourseCard, etc.)
-├── context/      # AppContext for global state management
-├── pages/        # Main application pages
-│   ├── students/ # Student-facing pages (Home, CourseDetails, Player, etc.)
-│   └── educators/# Educator dashboard and management pages
-└── main.jsx      # Entry point
+src
+│
+├── assets
+├── components
+├── context
+├── pages
+│   ├── students
+│   └── educators
+│
+└── main.jsx
+````
+
+---
+
+# 🛠 Installation
+
+```bash
+git clone https://github.com/yourusername/edemy.git
+
+cd edemy
+
+npm install
+
+npm run dev
 ```
 
 ---
 
-## 🛠️ Getting Started
+# 🎨 Design Highlights
 
-1.  **Clone the repository**
-2.  **Navigate to the client directory**: `cd client`
-3.  **Install dependencies**: `npm install`
-4.  **Create a `.env` file**: Define `VITE_CURRENCY` and other required variables.
-5.  **Run in development mode**: `npm run dev`
+✨ Glassmorphism
+
+✨ Premium Cards
+
+✨ Gradient UI
+
+✨ Responsive Design
+
+✨ Dark Mode
+
+✨ Micro Animations
+
+✨ Modern Typography
+
+✨ Smooth UX
 
 ---
 
-## 🎨 Design Philosophy
+# 🖼 Preview
 
-## Backend
+> Add your screenshots here
 
-Springboot, postgreSQL
+```
+/preview/home.png
 
-Edemy is a project I built with a “Wow First” mindset—combining vibrant colors, modern typography (Inter & Outfit), and interactive UI to create an engaging experience.
+/preview/course.png
 
-Built with ❤️ by Sachin Tiwari.
+/preview/player.png
+
+/preview/dashboard.png
+```
+
+---
+
+# 🌟 Future Roadmap
+
+* ✅ Payment Gateway
+* ✅ Certificates
+* ✅ Authentication
+* ✅ Quiz Module
+* ✅ AI Assistant
+* ✅ Backend APIs
+* ✅ Admin Panel
+
+---
+
+# 🤝 Looking for Backend Developer
+
+<div align="center">
+
+# 🚨 BACKEND NOT AVAILABLE 🚨
+
+## Need a Backend Developer
+
+### Tech Stack
+
+🟢 Spring Boot
+
+🟢 PostgreSQL
+
+🟢 JWT Authentication
+
+🟢 REST APIs
+
+---
+
+# 💰 Budget: ₹5,000
+
+If you're interested in building the backend,
+feel free to connect.
+
+</div>
+
+---
+
+# ❤️ Built With Passion
+
+<div align="center">
+
+### Designed & Developed by
+
+# Sachin Tiwari
+
+⭐ If you like this project, don't forget to Star the repository.
+
+</div>
+```
