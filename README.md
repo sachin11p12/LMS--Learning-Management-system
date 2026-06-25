@@ -168,18 +168,6 @@ npm run dev
 
 <div align="center">
 
-<div align="center">
-
-# 🚨 BACKEND REQUIRED 🚨
-
-## 💼 Looking for a Spring Boot + PostgreSQL Developer
-
-### 💰 Budget: **₹5,000**
-
-> 📩 Interested? Contact me via GitHub or LinkedIn.
-
-</div>
-
 ## ❤️ Built with Passion by
 
 # Sachin Tiwari
